@@ -1,4 +1,32 @@
-var input = document.getElementById("input");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSWORD STRENGTH</title>
+</head>
+<body onload="triggerFun()">
+    <div class="container">
+        <div class="header">Enter the Password to <br> Check the STRENGTH</div>
+        <form class="form">
+            <input type="password" placeholder="Enter The Password" id="input"  oninput="triggerFun(), emptyFun()">
+            <input type="button" value="SHOW" id="button" onclick="showFun()" >
+        </form><br>
+        <div class="indicator">
+            <span id="weak">1</span>
+            <span id="medium">2</span>
+            <span id="strong">3</span>
+        </div>  
+        <div><br>
+           <center><span id="bottom-text"></span> </center>
+        </div> 
+    </div>
+    
+    <script>
+        var input = document.getElementById("input");
 var button = document.getElementById("button");
 
 var weak = document.getElementById("weak");
@@ -92,11 +120,10 @@ function triggerFun(){
         }
 
     }   else{
+    
         indicator.style.display = "none";
 
     }       
-        setTimeout(triggerFun, 100);
-  
 }
 
 
@@ -123,3 +150,7 @@ function emptyFun(){
         bottomText.style.color = "#ffffff00";
     }
 }
+    </script>
+    
+</body>
+</html>
