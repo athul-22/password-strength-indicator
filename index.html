@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PASSWORD STRENGTH</title>
 </head>
-<body onload="">
+<body onload="triggerFun()">
     <div class="container">
         <div class="header">Enter the Password to <br> Check the STRENGTH</div>
         <form class="form">
-            <input type="password" placeholder="Enter The Password" id="input" onkeypress="triggerFun()" onkeyup="emptyFun()">
+            <input type="password" placeholder="Enter The Password" id="input"  oninput="triggerFun(), emptyFun()">
             <input type="button" value="SHOW" id="button" onclick="showFun()" >
         </form><br>
         <div class="indicator">
@@ -118,6 +120,7 @@ function triggerFun(){
         }
 
     }   else{
+    
         indicator.style.display = "none";
 
     }       
