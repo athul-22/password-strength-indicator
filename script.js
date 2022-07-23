@@ -95,6 +95,8 @@ function triggerFun(){
         indicator.style.display = "none";
 
     }       
+        setTimeout(triggerFun, 100);
+  
 }
 
 
